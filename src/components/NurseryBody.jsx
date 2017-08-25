@@ -9,14 +9,22 @@ class NurseryBody extends React.Component {
     this.state = {
       masterPlantList: [],
     };
+    this.addNewPlantToList = this.addNewPlantToList.bind(this);
+  }
+
+  addNewPlantToList(newPlant){
+    let newMasterPlantList = this.state.masterPlantList.slice();
+    newMasterPlantList.push(newPlant);
+    this.setState({masterPlantList: newMasterPlantList});
   }
 
 render(){
   return (
     <div>
-      <AddForm/>
       <PlantList
         plantList = {this.state.masterPlantList}/>
+      <AddForm
+        addNewPlantToList = {this.props.addNewPlantToList}/>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Plant(props){
   return (
@@ -9,6 +10,11 @@ function Plant(props){
       <hr/>
     </div>
   );
+}
+
+Plant.propTypes = {
+  name: PropTypes.string.isRequired,
+  watering: PropTypes.string.isRequired
 }
 
 export default Plant;

@@ -17,7 +17,7 @@ class AddForm extends React.Component {
     console.log('hi');
     console.log(newPlant);
 
-    // this.props.onNewPlantCreation(newPlant);
+    this.props.addNewPlantToList(newPlant);
 
   }
 
@@ -43,7 +43,7 @@ class AddForm extends React.Component {
 }
 
 AddForm.propTypes = {
-  onNewPlantCreation: PropTypes.func,
+  addNewPlantToList: PropTypes.func,
 };
 
 export default AddForm;
