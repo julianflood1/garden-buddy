@@ -5,6 +5,7 @@ function Plant(props){
     <div>
       <h3>{props.name}</h3>
       <h3>{props.watering}</h3>
+      <h1>hi</h1>
       <hr/>
     </div>
   );

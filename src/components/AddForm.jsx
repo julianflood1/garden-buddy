@@ -17,7 +17,7 @@ class AddForm extends React.Component {
     console.log('hi');
     console.log(newPlant);
 
-    this.props.onNewPlantCreation(newPlant);
+    // this.props.onNewPlantCreation(newPlant);
 
   }
 
