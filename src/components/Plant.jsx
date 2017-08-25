@@ -1,19 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// removeItem(){
-//   props.removePlant();
-// }
 
-function Plant(props){
-  return (
-    <div>
-      <h3>{props.name}</h3>
-      <h3>{props.watering}</h3>
-      <button onClick={this.removeItem}>Remove this plant variety!</button>
-      <hr/>
-    </div>
-  );
+class Plant extends React.Component{
+  constructor(props){
+    super(props);
+    this.removePlant = this.removePlant.bind(this);
+  }
+
+  removePlant(){
+    console.log(this.props);
+    this.props.deletePlant(this.props.masterPlantList.name)
+  }
+
+
+  render(){
+    return (
+      <div>
+        <h3>{this.props.name}</h3>
+        <h3>{this.props.watering}</h3>
+        <button onClick={this.removePlant}>Remove this plant variety!</button>
+        <hr/>
+      </div>
+    );
+  }
 }
 
 Plant.propTypes = {
