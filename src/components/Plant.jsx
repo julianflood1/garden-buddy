@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // removeItem(){
+//   props.removePlant();
 // }
 
 function Plant(props){

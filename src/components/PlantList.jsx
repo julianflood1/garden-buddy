@@ -8,6 +8,7 @@ function PlantList(props){
       {props.plantList.map((plant, index) =>
         <Plant name={plant.name}
           watering={plant.watering}
+          removePlant={props.removePlant}
           key={index}/>
       )}
     </div>

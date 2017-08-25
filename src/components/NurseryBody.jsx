@@ -13,7 +13,7 @@ class NurseryBody extends React.Component {
     this.removeSuggestedPlant = this.removeSuggestedPlant.bind(this);
   }
 
-  removeSuggestedPlant(plant){
+  removeSuggestedPlant(name){
   var array = this.state.masterPlantList;
   for (var i = 0; i < array.length; i++) {
     if (array[i].name === name) {
@@ -33,7 +33,8 @@ render(){
   return (
     <div>
       <PlantList
-        plantList = {this.state.masterPlantList}/>
+        plantList = {this.state.masterPlantList}
+        removePlant = {this.removeSuggestedPlant}/>
       <AddForm
         addNewPlantToList = {this.addNewPlantToList}/>
     </div>
