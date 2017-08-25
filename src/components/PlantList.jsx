@@ -5,11 +5,13 @@ function PlantList(props){
   return (
     <div>
     <hr/>
-      {props.plantList.map((plant, index) =>
-        <Plant name={plant.name}
-          watering={plant.watering}
+      {props.plantList.map((plantList, index) =>
+        <Plant name={plantList.name}
+          watering={plantList.watering}
+          childPlantList={plantList}
           removePlant={props.removePlant}
           key={index}/>
+
       )}
     </div>
   );

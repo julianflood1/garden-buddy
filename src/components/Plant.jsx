@@ -5,12 +5,12 @@ import PropTypes from "prop-types";
 class Plant extends React.Component{
   constructor(props){
     super(props);
-    this.removePlant = this.removePlant.bind(this);
+    this.removeThisPlant = this.removeThisPlant.bind(this);
   }
 
-  removePlant(){
+  removeThisPlant(){
     console.log(this.props);
-    this.props.deletePlant(this.props.masterPlantList.name)
+    this.props.removePlant(this.props.name);
   }
 
 
@@ -19,7 +19,7 @@ class Plant extends React.Component{
       <div>
         <h3>{this.props.name}</h3>
         <h3>{this.props.watering}</h3>
-        <button onClick={this.removePlant}>Remove this plant variety!</button>
+        <button onClick={this.removeThisPlant}>Remove this plant variety!</button>
         <hr/>
       </div>
     );

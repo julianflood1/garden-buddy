@@ -34,7 +34,7 @@ render(){
     <div>
       <PlantList
         plantList = {this.state.masterPlantList}
-        removePlant = {this.removeSuggestedPlant}/>
+        removePlant = {this.removePlant}/>
       <AddForm
         addNewPlantToList = {this.addNewPlantToList}/>
     </div>
