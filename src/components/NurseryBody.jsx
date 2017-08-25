@@ -24,7 +24,7 @@ render(){
       <PlantList
         plantList = {this.state.masterPlantList}/>
       <AddForm
-        addNewPlantToList = {this.props.addNewPlantToList}/>
+        addNewPlantToList = {this.addNewPlantToList}/>
     </div>
   );
 }
