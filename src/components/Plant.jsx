@@ -1,12 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+// removeItem(){
+// }
+
 function Plant(props){
   return (
     <div>
       <h3>{props.name}</h3>
       <h3>{props.watering}</h3>
-      <h1>hi</h1>
+      <button onClick={this.removeItem}>Remove this plant variety!</button>
       <hr/>
     </div>
   );

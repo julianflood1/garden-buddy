@@ -10,7 +10,18 @@ class NurseryBody extends React.Component {
       masterPlantList: [],
     };
     this.addNewPlantToList = this.addNewPlantToList.bind(this);
+    this.removeSuggestedPlant = this.removeSuggestedPlant.bind(this);
   }
+
+  removeSuggestedPlant(plant){
+  var array = this.state.masterPlantList;
+  for (var i = 0; i < array.length; i++) {
+    if (array[i].name === name) {
+      array.splice(i, 1);
+      this.setState({masterPlantList: array});
+    }
+  }
+}
 
   addNewPlantToList(newPlant){
     let newMasterPlantList = this.state.masterPlantList.slice();
